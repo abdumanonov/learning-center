@@ -2,10 +2,12 @@
     box-sizing: border-box;
     max-width: 1400px;
     margin: 0;
+    font-family: 'Roboto Serif', serif;;
 }
 
 ul li {
     list-style: none;
+    display: inline-block;
 }
 
 a {
@@ -16,10 +18,20 @@ header {
     background-color: red;
     margin: 0 3rem;
     height: 10vh;
+    display: flex;
 }
 
 header>a {
     font-size: 25px;
     color: #84DA9D;
     text-transform: uppercase;
+    padding: 0.5rem;
+    width: 20%;
+}
+
+header>ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 0.6rem;
 }
