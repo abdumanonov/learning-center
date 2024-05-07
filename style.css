@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: auto;
     font-family: 'Roboto Serif', serif;
 }
@@ -17,89 +17,97 @@ a {
 
 /*header section style  */
 header {
-    width: 100%;
-    height: 10vh;
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    /* max-width: 1400px; */
+    height: 10%;
 }
 
 header nav {
-    /* margin: 0 3rem; */
-    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    height: 10%;
     position: fixed;
-    background-color: red;
+    background-color: white;
     width: 100%;
     z-index: 9999;
 }
 
-header nav>a {
-    background-color: pink;
-    font-size: 2rem;
-    color:#54db7a;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    width: 20%;
-    font-weight: bolder;
-    display: inline-block;
+header nav>ul {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-header>ul {
-    display: inline-block;
-    justify-content: space-between;
-    width: 70%;
-    background-color: aqua;
-}
-
-header>ul>li {
-    display: inline-block;
+nav ul li:first-child {
+    width: 35%;
+    height: 100%;
     display: flex;
     align-items: center;
-    font-size: 10px;
+    margin-left: 0;
+} 
+nav ul li:first-child a {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    width: 100%;
+    color: #54db7a;
+    margin: 0;
+    padding: 0;
 }
 
-ul>li:first-child a{
-    color: #01a02e;
+header nav>ul>li {
+    font-size: 15px;
 }
 
-header>ul>li>a {
+
+header>nav>ul>li>a {
     transition: 0.3s ease-in;
     text-transform: capitalize;
     color: rgb(61, 57, 57);
 }
 
-header>ul>li>a:hover {
+header>nav>ul>li>a:hover {
     color: #01a02e;
 }
 
-header>ul>li>button {
+header>nav>ul>li button {
     background-color:#54db7a;
     border: none;
-    border-radius: 5px;
-    font-size: 10px;
-    height: 25px;
+    text-transform: capitalize;
+    border-radius: 25px;
+    width: 8rem;
+    font-size: 15px;
+    height: 2.5rem;
     transition: 0.5s ease-in;
 }
 
-header>ul>li>button>a {
+header>nav>ul>li>button>a {
     color: white;
 }
 
-header>ul>li:last-child button:hover {
+header>nav>ul>li:last-child {
+    margin-right: 0;
+}
+
+header>nav>ul>li:last-child button:hover {
     background-color: #0dad3b;
 }
 
 /* hero section style */
 
-main .hero {
-    position: relative;
+.hero {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: url(Mentor/assets/img/hero-bg.jpg) top center;
     background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    background-attachment: fixed;
 }
   
- main .hero:before {
+.hero:before {
     content: "";
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -109,33 +117,457 @@ main .hero {
     right: 0;
   }
 
-main .hero-info {
-    margin: 0 3.5rem;
-    top: 45%;
+.hero-info {
+    width: 90%;
+    /* display: flex; */
+    top: 55%;
+    padding: 0;
     position: absolute;
     transform: translate(0, -50%);
+    margin-left: 0;
+}
+
+.hero-info h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.877);
 }
 
-main .hero-info p {
+.hero-info p {
+    font-size: 1.5rem;
     margin-top: 0.5rem;
     color: rgba(255, 255, 255, 0.795);
 }
 
-main .hero button {
+.hero .hero-info button {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1rem;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 10px 35px;
+    width: 10rem;
+    height: 3rem;
     border-radius: 50px;
     transition: 0.5s;
     margin-top: 30px;
     border: 2px solid #fff;
-    color: #fff;
+    background-color: transparent;
   }
-main .hero-info button:hover {
+
+  .hero button a {
+    color: white;
+  }
+
+.hero-info button:hover {
     background: #5fcf80;
     border: 2px solid #5fcf80;
+}
+
+
+/* about section style */
+.about {
+    margin-top: 5rem;
+    height: 107rem;
+    width: 100%;
+}
+
+.about .container{
+    display: flex;
+    width: 90%;
+    height: 35rem;
+    padding: 0;
+    position: relative;
+}
+
+.about .about-info {
+    /* background-color: aqua; */
+    height: 35rem;
+    width: 100%;
+
+}
+.about .about-info .about-text {
+    width: 50%;
+    float: left;
+}
+
+.about .about-info .about-image img {
+    width: 50%;
+    height: 35rem;
+}
+
+.about-text h5 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.about-text ul {
+    margin: 1.5rem 0;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    margin: 0.7rem 0;
+    font-size: 1.2rem;
+}
+
+.about-text ul li i{
+    margin-right: 0.7rem;
+    padding: 3px;
+    color: #0dad3b;
+    border: solid 2px green;
+    border-radius: 50%;
+}
+
+.about .about-text button {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 12rem;
+    height: 4rem;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color:#54db7a;
+    border: 2px solid #54db7a;
+    transition: 0.6s ease-in;
   }
+
+.about .about-text button a {
+    color: white;
+    margin-left: -40px;
+
+}
+
+.about .about-text button i {
+    color: white;
+    transition: 0.6s ease-in;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
+
+.about .about-text button:hover {
+    background-color: #6ee790;
+}
+
+.about .about-text button:hover i{
+    margin-left: 20px;
+}
+
+.about-statistics {
+    background-color: #F6F7F6;
+    width: 100%;
+    position: relative;
+    height: 13rem;
+    margin-top: 3rem;
+}
+
+.about-st-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-st-info h3 {
+    color: #54db7a;
+    font-size: 3.5rem;
+}
+
+.about-st-info p {
+    text-align: center;
+    text-transform: capitalize;
+    color: #8F9DAA;
+}
+
+
+/* Why choose us contaunier */
+.about .whyChooseUs {
+    margin-top: 4rem;
+    width: 90%;
+    height: 33rem;
+    display: flex;
+}
+
+.whyChooseUs div:first-child {
+    background-color: #5FCF80;
+    width: 80%;
+    padding: 2rem;
+    margin: 0;
+    margin-right: 1.6rem;
+    height: 29rem;
+}
+
+.whyChooseUs div:first-child h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.whyChooseUs div:first-child p{
+    color: white;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.whyChooseUs div:first-child button {
+    background-color: #73e094;
+    color: #F6F7F6;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 35px;
+    cursor: pointer;
+    border: 2px solid #54db7a;
+    transition: 0.6s ease-in;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+
+.whyChooseUs div:first-child button:hover{
+    background-color: #F6F7F6;
+    color: #54db7a;
+}
+
+.whyChooseUs div:first-child button a{
+    color: #F6F7F6;
+    transition: 0.6s ease-in;
+}
+
+.whyChooseUs div:first-child button:hover a{
+    color: #54db7a;
+}
+
+.whyChooseUs div:first-child button i{
+    color: #F6F7F6;
+    transition: 0.6s ease-in;
+}
+
+.whyChooseUs div:first-child button:hover i{
+    color: #54db7a;
+}
+
+.whyChooseUs .reasonToChoose {
+    height: 29rem;
+    border: 2px solid rgb(235, 230, 230);
+    text-align: center;
+    margin: 0 1.5rem;
+    padding: 0 3rem;
+}
+
+.whyChooseUs .reasonToChoose span{
+    font-size: 2rem;
+    color: #54db7a;
+    padding: 1rem 1.4rem;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    background-color:#F6F7F6;
+}
+
+.whyChooseUs .reasonToChoose span i {
+    margin-top: 6rem;
+}
+
+
+.whyChooseUs .reasonToChoose:hover span{
+    background-color: #54db7a;
+    color: white;
+} 
+
+.whyChooseUs .reasonToChoose h5 {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+    color: #5f6469;
+    font-weight: bold;
+}
+
+.whyChooseUs .reasonToChoose p {
+    line-height: 1.5rem;
+    color: #8F9DAA;
+}
+
+/* about partners style */
+.about .about-partners {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+}
+
+.about .about-partners div {
+    width: 22rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    border: 2px solid rgb(235, 230, 230);
+}
+
+.about .about-partners div span:first-child {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+
+.about .about-partners div p {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: #5f6469;
+    transition: 0.2s ease-in-out;
+}
+
+.about .about-partners div:hover p {
+    color: #1dda53;
+}
+
+
+/* courses section style */
+.courses {
+    width: 90%;
+    height: 90vh;
+    margin-top: 3rem;
+}
+
+.courses .course-head-info h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+.courses .course-head-info p {
+    text-transform: uppercase;
+    color:  #8F9DAA;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+}
+
+.courses .course-head-info span {
+    width: 7rem;
+    margin-left: 0.7rem;
+    height: 0.12rem;
+    background-color: #1dda53;
+    display: inline-block;
+    line-height: 1rem;
+    vertical-align: middle;
+}
+
+.courses .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.courses .container .course {
+    border: 2px solid #d3d6da;
+    width: 28vw;
+    margin: 0;
+}
+
+.courses .container .course>img {
+    height: 17rem;
+    width: 100%;
+}
+
+.courses .container .course .course-title p {
+    background-color: #1dda53;
+    display: inline-block;
+    width: 11rem;
+    font-size: 1rem;
+    height: 2.3rem;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: white;
+    margin: 1rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-radius: 8px;
+}
+
+.courses .container .course .course-title span{
+    float: right;
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #5f6469;
+}
+
+.courses .container .course .course-title-2 p {
+    width: 7rem;
+}
+
+.courses .container .course .course-title-3 p {
+    width: 6rem;
+}
+
+.courses .container .course .course-info a{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    color: #4d4e4e;
+    text-transform: capitalize;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+}
+
+.courses .container .course .course-info a:hover{
+    color:#1dda53;    
+}
+
+.courses .container .course .course-info p{
+    margin: 1rem;
+    color: #5f6469;
+}
+
+.courses .container .course .course-mentor {
+    display: flex;
+}
+
+.courses .container .course .course-mentor img {
+    height: 3.3rem;
+    margin: 1rem;
+    border-radius: 50%;
+    width: 3.3rem;
+    display: block;
+    margin-right: 0.5rem;
+}
+
+.courses .container .course .course-mentor p {
+    width: 50%;
+    margin-left: 0;
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: #58585a;
+    transition: 0.3s ease-in-out;
+}
+
+
+.courses .container .course .course-mentor p:hover {
+    color: #1dda53;
+    cursor: pointer; 
+}
+
+.courses .container .course .course-mentor span {
+    color: #adafb3;
+    font-size: 1.2rem;
+}
+
+.courses .container .course .course-mentor span i {
+    margin-right: 0.3rem;
+}
+
+
